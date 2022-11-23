@@ -1,0 +1,30 @@
+'Code behind Page - Add local subroutines for the page.
+Sub buttonPressed
+	Dim x As String
+	Dim path As String
+	x = "Test"
+	path = "c:\Test.pdf"
+ListBox0.ToString.Insert (0,"Test")
+ListBox0.ToString.Insert(1,"Karl")
+
+ showdocument(path)
+End Sub
+
+
+ Sub ListBox_Update1    
+'  Function to add items to a list box at runtime.
+
+    Dim array(100) As Object
+	Dim ListItems(100) As String
+    Dim x As Integer
+	
+	ListItems(0) = "Test"
+	ListItems(1) = "Test1"
+	ListItems(2) = "Test2"
+	ListItems(3) = "Test3"
+	
+    For x = 0 To 3
+        array(x) = ListItems(x)
+    Next x
+    listbox0.SetItems(array)
+End Sub 
